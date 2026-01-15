@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import SEO from '../lib/seo'
+import { FORMSPREE_ID } from '../lib/config'
 
 export default function Contact() {
 	const [status, setStatus] = useState<'idle'|'sending'|'sent'|'error'>('idle')
@@ -10,11 +11,27 @@ export default function Contact() {
 		const form = e.currentTarget
 		const data = new FormData(form)
 		try {
-			const formspreeId = import.meta.env.VITE_FORMSPREE_ID
-			if (!formspreeId) throw new Error('Missing Formspree ID')
-			const res = await fetch(`https://formspree.io/f/${formspreeId}`, { method: 'POST', body: data, headers: { Accept: 'application/json' } })
-			if (res.ok) { setStatus('sent'); form.reset() } else throw new Error('Failed')
-		} catch (err) { setStatus('error') }
+			if (!FORMSPREE_ID) {
+				throw new Error('Formspree ID not configured. Please set VITE_FORMSPREE_ID in .env or update config.ts')
+			}
+			const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, { 
+				method: 'POST', 
+				body: data, 
+				headers: { Accept: 'application/json' } 
+			})
+			if (res.ok) { 
+				form.reset()
+				setStatus('idle')
+				alert('Thank you! We have received your message and will get back to you soon.')
+			} else {
+				const errorData = await res.json().catch(() => ({}))
+				console.error('Formspree error:', errorData)
+				throw new Error('Failed to send message')
+			}
+		} catch (err) { 
+			console.error('Form submission error:', err)
+			setStatus('error') 
+		}
 	}
 
 	return (
@@ -48,8 +65,11 @@ export default function Contact() {
 							<button className="btn btn-emerald" disabled={status==='sending'}>
 								{status==='sending'?'Sending...':'Send Message'}
 							</button>
-							{status==='sent' && <span className="text-success">Thanks! We will get back to you.</span>}
-							{status==='error' && <span className="text-danger">Unable to send. Configure VITE_FORMSPREE_ID.</span>}
+							{status==='error' && (
+								<span className="text-danger">
+									Unable to send. Please configure Formspree ID in src/config.ts
+								</span>
+							)}
 						</div>
 					</form>
 				</div>

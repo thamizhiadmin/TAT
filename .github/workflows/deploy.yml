@@ -36,6 +36,7 @@ jobs:
         env:
           GITHUB_PAGES: true
           GITHUB_REPOSITORY: ${{ github.repository }}
+          VITE_FORMSPREE_ID: ${{ secrets.VITE_FORMSPREE_ID }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

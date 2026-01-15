@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import SEO from '../lib/seo'
 
 export default function Home() {
-    return (
+	return (
 		<div>
 			<SEO title="Thamizhi Automate Technology – SharePoint, Power Platform, React" description="Innovative automation across SharePoint, Power Platform, and React. Building toward IoT." />
 			<section className="position-relative text-center text-light">
@@ -11,7 +11,7 @@ export default function Home() {
 						<div className="row align-items-center g-4">
 							<div className="col-12 col-lg-7 text-start">
 								<h1 className="display-5 fw-bold" style={{ fontFamily: 'Poppins' }}>Thamizhi Automate Technology</h1>
-								<p className="lead mt-3">Innovate. Integrate. Accelerate.</p>
+								<p className="lead mt-3">Innovate Integrate Accelerate</p>
 								<p className="mt-3 text-secondary">SharePoint solutions, Power Platform automation, and production-grade React web apps. Building toward IoT and embedded automation.</p>
 								<div className="d-flex flex-wrap gap-3 mt-4">
 									<Link to="/services" className="btn btn-emerald">Our Services</Link>
@@ -35,7 +35,7 @@ export default function Home() {
 												<i className="bi bi-diagram-3 text-emerald fs-3"></i>
 												<div>
 													<h6 className="mb-1">Power Platform</h6>
-													<p className="mb-0 small text-secondary">Power Automate flows, approval workflows, and integrated reporting.</p>
+													<p className="mb-0 small text-secondary">Power Automate flows, approval workflows, PowerApps, Power pages, PowerBi and integrated reporting.</p>
 												</div>
 											</div>
 										</div>

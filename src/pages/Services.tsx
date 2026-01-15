@@ -20,7 +20,34 @@ export default function Services() {
 						<div className="card-body">
 							<i className="bi bi-diagram-3 fs-2 text-emerald"></i>
 							<h5 className="mt-2">Power Platform</h5>
-							<p className="text-secondary">Power Automate workflows, approvals, governance, Power Apps, and reporting.</p>
+							<p className="text-secondary">Power Automate workflows, approvals, governance, and automation solutions.</p>
+						</div>
+					</div>
+				</div>
+				<div className="col-md-6 col-lg-3">
+					<div className="card bg-dark border-secondary h-100">
+						<div className="card-body">
+							<i className="bi bi-app-indicator fs-2 text-emerald"></i>
+							<h5 className="mt-2">Power Apps</h5>
+							<p className="text-secondary">Custom business applications, canvas apps, model-driven apps, and mobile solutions.</p>
+						</div>
+					</div>
+				</div>
+				<div className="col-md-6 col-lg-3">
+					<div className="card bg-dark border-secondary h-100">
+						<div className="card-body">
+							<i className="bi bi-bar-chart fs-2 text-emerald"></i>
+							<h5 className="mt-2">Power BI</h5>
+							<p className="text-secondary">Data visualization, interactive dashboards, reports, and business intelligence solutions.</p>
+						</div>
+					</div>
+				</div>
+				<div className="col-md-6 col-lg-3">
+					<div className="card bg-dark border-secondary h-100">
+						<div className="card-body">
+							<i className="bi bi-globe fs-2 text-emerald"></i>
+							<h5 className="mt-2">Power Pages</h5>
+							<p className="text-secondary">Low-code websites and portals for external-facing business applications.</p>
 						</div>
 					</div>
 				</div>
