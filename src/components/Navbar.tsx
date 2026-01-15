@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 
 export default function Navbar() {
 	return (
@@ -8,7 +8,7 @@ export default function Navbar() {
 					<span className="rounded-circle d-inline-flex align-items-center justify-content-center bg-gradient-emerald" style={{ width: 36, height: 36 }}>
 						<i className="bi bi-cpu text-dark"></i>
 					</span>
-					<span className="fw-bold" style={{ fontFamily: 'Poppins' }}>Thamizhi Automate Technology</span>
+					<span className="fw-bold" style={{ fontFamily: 'Poppins' }}>Thamizhi</span>
 				</NavLink>
 
 				<button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,14 +17,24 @@ export default function Navbar() {
 
 				<div className="collapse navbar-collapse" id="nav">
 					<ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-						<li className="nav-item"><NavLink to="/" end className="nav-link">Home</NavLink></li>
-						<li className="nav-item"><NavLink to="/services" className="nav-link">Services</NavLink></li>
-						<li className="nav-item"><NavLink to="/portfolio" className="nav-link">Portfolio</NavLink></li>
-						<li className="nav-item"><NavLink to="/about" className="nav-link">About</NavLink></li>
-						<li className="nav-item"><NavLink to="/contact" className="nav-link">Contact</NavLink></li>
+						<li className="nav-item">
+							<NavLink to="/" end className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Home</NavLink>
+						</li>
+						<li className="nav-item">
+							<NavLink to="/services" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Services</NavLink>
+						</li>
+						<li className="nav-item">
+							<NavLink to="/portfolio" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Portfolio</NavLink>
+						</li>
+						<li className="nav-item">
+							<NavLink to="/about" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>About</NavLink>
+						</li>
+						<li className="nav-item">
+							<NavLink to="/contact" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Contact</NavLink>
+						</li>
 					</ul>
 					<div className="d-none d-lg-block ms-3">
-						<a href="#contact" className="btn btn-emerald btn-sm">Get a Quote</a>
+						<Link to="/contact" className="btn btn-emerald btn-sm">Get a Quote</Link>
 					</div>
 				</div>
 			</div>

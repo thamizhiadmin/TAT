@@ -57,8 +57,8 @@ export default function Contact() {
 					<div className="card bg-dark border-secondary h-100">
 						<div className="card-body">
 							<h5>Reach Us</h5>
-							<p className="text-secondary mb-1">Email: info@thamizhi.example</p>
-							<p className="text-secondary">Phone: +91-00000-00000</p>
+							<p className="text-secondary mb-1">Email: info@tamizhiautomatetechnology.in</p>
+							<p className="text-secondary">Phone: +91-93455-23197</p>
 							<div className="ratio ratio-16x9 border border-secondary rounded">
 								<iframe title="map" src="https://maps.google.com/maps?q=chennai&t=&z=11&ie=UTF8&iwloc=&output=embed"></iframe>
 							</div>

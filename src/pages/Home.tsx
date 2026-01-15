@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import SEO from '../lib/seo'
 
 export default function Home() {
@@ -13,8 +14,8 @@ export default function Home() {
 								<p className="lead mt-3">Innovate. Integrate. Accelerate.</p>
 								<p className="mt-3 text-secondary">SharePoint solutions, Power Platform automation, and production-grade React web apps. Building toward IoT and embedded automation.</p>
 								<div className="d-flex flex-wrap gap-3 mt-4">
-									<a href="/services" className="btn btn-emerald">Our Services</a>
-									<a href="/portfolio" className="btn btn-outline-light">See Portfolio</a>
+									<Link to="/services" className="btn btn-emerald">Our Services</Link>
+									<Link to="/portfolio" className="btn btn-outline-light">See Portfolio</Link>
 								</div>
 							</div>
 							<div className="col-12 col-lg-5">

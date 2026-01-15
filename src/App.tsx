@@ -7,9 +7,12 @@ import Portfolio from './pages/Portfolio'
 import About from './pages/About'
 import Contact from './pages/Contact'
 
+// Get base path from Vite config or default to '/'
+const basePath = import.meta.env.BASE_URL || '/'
+
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basePath}>
       <div className="d-flex flex-column min-vh-100">
         <Navbar />
         <main className="flex-fill">
