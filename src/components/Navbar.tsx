@@ -7,7 +7,6 @@ export default function Navbar() {
 			<div className="container">
 				<NavLink to="/" className="navbar-brand d-flex align-items-center gap-2">
 					<span className="rounded-circle d-inline-flex align-items-center justify-content-center bg-gradient-emerald" style={{ width: 36, height: 36 }}>
-						<i className="bi bi-cpu text-dark"></i>
 						{/* <i className="bi bi-cpu text-dark"></i> */}
 						<img
 							src={logoPrimary}
