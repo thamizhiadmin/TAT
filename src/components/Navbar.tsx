@@ -1,23 +1,14 @@
 import { NavLink, Link } from 'react-router-dom'
-import logoprimary from '../assets/logo-primary.jpeg'
 
 export default function Navbar() {
 	return (
 		<nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top border-bottom border-secondary">
 			<div className="container">
 				<NavLink to="/" className="navbar-brand d-flex align-items-center gap-2">
-					{/*
 					<span className="rounded-circle d-inline-flex align-items-center justify-content-center bg-gradient-emerald" style={{ width: 36, height: 36 }}>
-						<i className="bi bi-cpu text-dark"></i>*/}
-					<img
-						src={logoprimary}
-						alt="Company Logo"
-						width="80"
-						height="80"
-						className="img-fluid"
-					/>
-					{/*<span>
-					<span className="fw-bold" style={{ fontFamily: 'Poppins' }}>TAT</span>*/}
+						<i className="bi bi-cpu text-dark"></i>
+					</span>
+					{/*span className="fw-bold" style={{ fontFamily: 'Poppins' }}>Thamizhi</span>*/}
 				</NavLink>
 
 				<button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
