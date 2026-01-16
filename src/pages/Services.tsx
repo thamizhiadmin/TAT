@@ -3,7 +3,7 @@ import SEO from '../lib/seo'
 export default function Services() {
 	return (
 		<div className="container section">
-			<SEO title="Services – Thamizhi Automate Technology" description="SharePoint, Power Platform automation, React web apps, and IoT roadmap." />
+			<SEO title="Services – Thamizhi Automate Technology" description="SharePoint, Power Platform, Microsoft CRM, React web apps, and automation solutions." />
 			<h2 className="fw-bold mb-4" style={{ fontFamily: 'Poppins' }}>Services</h2>
 			<div className="row g-4">
 				<div className="col-md-6 col-lg-3">
@@ -48,6 +48,15 @@ export default function Services() {
 							<i className="bi bi-globe fs-2 text-emerald"></i>
 							<h5 className="mt-2">Power Pages</h5>
 							<p className="text-secondary">Low-code websites and portals for external-facing business applications.</p>
+						</div>
+					</div>
+				</div>
+				<div className="col-md-6 col-lg-3">
+					<div className="card bg-dark border-secondary h-100">
+						<div className="card-body">
+							<i className="bi bi-briefcase fs-2 text-emerald"></i>
+							<h5 className="mt-2">Microsoft CRM</h5>
+							<p className="text-secondary">Dynamics 365 implementation, customization, integration, and customer relationship management solutions.</p>
 						</div>
 					</div>
 				</div>

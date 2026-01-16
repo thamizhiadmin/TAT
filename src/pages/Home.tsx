@@ -35,7 +35,7 @@ export default function Home() {
 												<i className="bi bi-diagram-3 text-emerald fs-3"></i>
 												<div>
 													<h6 className="mb-1">Power Platform</h6>
-													<p className="mb-0 small text-secondary">Power Automate flows, approval workflows, PowerApps, Power pages, PowerBi and integrated reporting.</p>
+													<p className="mb-0 small text-secondary">Power Automate flows, approval workflows, PowerApps, Power pages, PowerBi, Microsoft CRM and integrated reporting.</p>
 												</div>
 											</div>
 										</div>
